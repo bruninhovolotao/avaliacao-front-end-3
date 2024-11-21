@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+a:hover{
+    color: #56cd42 !important;
+}
+
+
+
+/* HEADER */
+
+header{
+    padding: 30px;
+}
+
+header img{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+/* PESQUISA */
+
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10em 0;
+}
+.search h1{
+    width: 100%;
+    color:#105718;
+    margin-bottom: 40px;
+}
+
+.search input::placeholder{
+    color: #cfcccc;
+}
+
+.search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.search-input input{
+    width: 68%;
+    margin: 0 17%;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #cfcccc;
+    border-radius: 10px;
+    color: #000;
+}
+
+.search-input i{
+    position: absolute;
+    right: 17.55%;
+    top:9px;
+    font-size: 20px;
+    color: #56cd42;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.bg{
+    background-image: url('../img/FUNDO.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+
+.card-body{
+    background-color: #354338;
+    border-radius: 0 7px 7px 0;
+}
+
+.card-body a{
+    color: white;
+}
+
+.card-body a:hover{
+    color: #56cd42;
+}
+
+.card-list{
+    display: flex;
+    padding-top: 10em;
+    padding-bottom: 55vw;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 10px 10px 0 10px;
+    background: transparent;
+    border: 0;
+    border-radius: 10px !important;
+}
+
+.card-thumbnail{
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}
+
+
+.card-title{
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.card-characters{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-status i{
+    color: #56cd42;
+    padding-right: 5px;
+}
+
+.card-title-gray{
+    color: #848484;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.card-response{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: #1f2821;
+    padding: 5em 0 1em 0;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer li{
+    color: #848484;
+    font-weight: bold;
+}
+
+footer span{
+    color: #848484;
+}
+
+footer .dev{
+    text-align: center;
+    padding-top: 15%;
+    color:white;
+    font-weight: bold;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width:580px){
+    
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .search {
+        padding: 1em 0 3em 0;
+    }
+}
