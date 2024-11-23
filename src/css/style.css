@@ -88,6 +88,7 @@ header img{
     background-size: cover;
     background-color: #000;
     background-repeat: no-repeat;
+    padding-bottom: 55vw;
 }
 
 .card-body{
@@ -106,7 +107,6 @@ header img{
 .card-list{
     display: flex;
     padding-top: 10em;
-    padding-bottom: 55vw;
     flex-wrap: wrap;
 }
 
@@ -115,6 +115,11 @@ header img{
     background: transparent;
     border: 0;
     border-radius: 10px !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    animation: scaleUp 0.3s forwards;
 }
 
 .card-thumbnail{
@@ -134,6 +139,7 @@ header img{
 
 .card img:hover{
     transform: scale(1.1);
+    box-shadow: 0 0 0 10px #56cd42;
 }
 
 
@@ -167,6 +173,31 @@ header img{
     font-weight: bold;
     font-size: 18px;
 }
+
+
+
+/* PAGINAÇÃO */
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .pagination button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 
 
 
@@ -204,10 +235,36 @@ footer .dev{
 
 
 
+/* ANIMATION */
+
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+
+
+
+/* MODAL */
+
+.modal-characters{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+
 
 /* RESPONSIVE */
 
-@media (max-width:580px){
+@media (max-width:576px){
     
     header{
         display: flex;
@@ -216,4 +273,38 @@ footer .dev{
     .search {
         padding: 1em 0 3em 0;
     }
+    .bg {
+        background-size: contain;
+    }
+    .card-thumbnail {
+        overflow: hidden;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .card-body {
+        background-color: #354338;
+        border-radius: 0 0 7px 7px;
+    }
 }
+
+@media (max-width:768px){
+    
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .search {
+        padding: 1em 0 3em 0;
+    }
+    .bg {
+        background-size: contain;
+    }
+    .card-thumbnail {
+        overflow: hidden;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .card-body {
+        background-color: #354338;
+        border-radius: 0 0 7px 7px;
+    }
+}
+

@@ -1,5 +1,6 @@
 const cardsContainer = document.getElementById('card-list')
 
+
 async function getCards(){
     try{
 
@@ -11,12 +12,12 @@ async function getCards(){
 
         cards.forEach((card) => {
             const cardElement = document.createElement('div')
-            cardElement.classList.add('card', 'mb-3', 'col-6')
+            cardElement.classList.add('card', 'mb-3', 'g-col-6', 'col-sm-6')
             cardElement.innerHTML = `
                 <div class="row g-0">
                         <div class="card-thumbnail col-md-4">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <img src="${card.image}" class="img-fluid rounded-start" alt="...">
+                                <img src="${card.image}" class="img-fluid" alt="...">
                             </a>
                         </div>
                     
